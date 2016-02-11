@@ -1,6 +1,6 @@
 {
   "name": "down-all",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Downloads files via HTTP(S)",
   "main": "./index.js",
   "engines": {
