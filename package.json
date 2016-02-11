@@ -46,7 +46,8 @@
   "homepage": "https://github.com/alykoshin/down-all",
   "dependencies": {
     "mkdirp": "^0.5.1",
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+    "text-spinner": "0.0.1"
   },
   "devDependencies": {
     "chai": "^3.4.1",
