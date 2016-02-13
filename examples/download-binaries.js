@@ -4,10 +4,10 @@
 
 'use strict';
 
-var spinner = require('text-spinner')();
+//var spinner = require('text-spinner')();
 
 
-var down = require('../')({ dest: 'downloads' }); // Base download directory
+var down = require('../')({ dest: 'downloads', progress: true }); // Base download directory
 
 
 var links = [
@@ -31,8 +31,8 @@ down.on('start', function(progressObj) {
   console.log('down.on(\'start\') progressObj:', progressObj);
 });
 
-down.on('progress', function(progressObj) {
-  spinner.spin();
+down.on('progress', function(/*progressObj*/) {
+  //spinner.spin();
 });
 
 down.on('end', function(progressObj) {

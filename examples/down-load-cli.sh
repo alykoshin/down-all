@@ -5,4 +5,4 @@
 # Bash version
 #
 
-node ../cli.js -f files.json
+node ../cli.js -f files.json --progress

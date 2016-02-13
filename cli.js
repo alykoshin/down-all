@@ -7,7 +7,7 @@
 
 var argv = require('minimist')(process.argv.slice(2));
 var path = require('path');
-var spinner = require('text-spinner')();
+//var spinner = require('text-spinner')();
 
 var pkg = require('./package.json');
 
@@ -26,8 +26,12 @@ function help() {
 }
 
 function version() {
-  console.log('package version:', pkg.version);
-  console.log('process.version:', process.version);
+  console.log([
+    '* version info:',
+    '* package.json version: ' + pkg.version,
+    '* process.version: ' + process.version,
+    ''
+  ].join('\n'));
 }
 
 if (argv.h || argv.help) {
@@ -40,8 +44,11 @@ if (argv.v || argv.version) {
   return;
 }
 
+var progress = argv.p || argv.progress;
+var inputFile = argv.f || argv.file;
 
-var down = require('./index.js')();
+
+var down = require('./index.js')({ progress: progress });
 
 
 down.on('file-start', function(linkObj/*, progressObj*/) {
@@ -53,11 +60,9 @@ down.on('end', function(/*progressObj*/) {
 });
 
 down.on('progress', function(/*progressObj*/) {
-  spinner.spin();
+  //spinner.spin();
 });
 
-
-var inputFile = argv.f || argv.fil;
 if (inputFile) {
   var pathname = path.join(process.cwd(), inputFile);
   var links = require(pathname);
