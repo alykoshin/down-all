@@ -40,12 +40,12 @@ function version() {
 
 if (argv.h || argv.help) {
   help();
-  return;
+  process.exit(0);
 }
 
 if (argv.v || argv.version) {
   version();
-  return;
+  process.exit(1);
 }
 
 var verbose = argv.v || argv.verbose;
@@ -53,7 +53,7 @@ var progress = argv.p || argv.progress;
 var jsonFileList = argv.f || argv.file;
 if (!jsonFileList) {
   help();
-  return;
+  process.exit(1);
 }
 
 
