@@ -48,13 +48,13 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "request": "^2.69.0",
-    "text-spinner": "0.0.1"
+    "text-spinner": "0.0.3"
   },
   "devDependencies": {
     "chai": "^3.4.1",
     "chai-things": "^0.2.0",
     "coveralls": "^2.11.4",
-    "eslint": "^1.10.3",
+    "eslint": "^2.0.0",
     "istanbul": "^0.4.1",
     "jshint": "^2.8.0",
     "jsinspect": "^0.7.2",

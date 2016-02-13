@@ -3,4 +3,4 @@
 @REM Windows version
 @REM
 
-node ../cli.js -f files.json --progress
+node ../cli.js -f files.json --progress --verbos

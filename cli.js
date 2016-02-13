@@ -19,8 +19,12 @@ function help() {
     '',
     '  Package description: ' + pkg.description,
     '',
+    '  Options:',
+    '    -p || --progress - show spinning indicator',
+    '    -v || --verbose  - print logging info',
+    '    -f || --file  - print logging info',
     '  Example:',
-    '    node node_modules/' + pkg.name + '/cli.js',
+    '    node node_modules/' + pkg.name + '/cli.js files.json',
     ''
   ].join('\n'));
 }
@@ -44,30 +48,36 @@ if (argv.v || argv.version) {
   return;
 }
 
+var verbose = argv.v || argv.verbose;
 var progress = argv.p || argv.progress;
-var inputFile = argv.f || argv.file;
+var jsonFileList = argv.f || argv.file;
+if (!jsonFileList) {
+  help();
+  return;
+}
 
 
 var down = require('./index.js')({ progress: progress });
 
-
 down.on('file-start', function(linkObj/*, progressObj*/) {
-  console.log('* starting file ' + linkObj.url + ' -> ' + linkObj.path);
+  if (verbose) {
+    console.log('* starting file ' + linkObj.url + ' -> ' + linkObj.path);
+  }
 });
 
 down.on('end', function(/*progressObj*/) {
-  console.log('* All downloads finished.');
+  if (verbose) {
+    console.log('* All downloads finished.');
+  }
 });
 
 down.on('progress', function(/*progressObj*/) {
   //spinner.spin();
 });
 
-if (inputFile) {
-  var pathname = path.join(process.cwd(), inputFile);
-  var links = require(pathname);
-  down.load(links);
-}
+var pathname = path.join(process.cwd(), jsonFileList);
+var links = require(pathname);
+down.load(links);
 
 
 
