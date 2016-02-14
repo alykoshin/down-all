@@ -1,8 +1,8 @@
 [
-  { "url": "https://nodejs.org/dist/v4.2.6/win-x64/node.exe", "path": "downloads/v4.2.6/win-x64" },
-  { "url": "https://nodejs.org/dist/v4.2.6/win-x64/node.lib", "path": "downloads/v4.2.6/win-x64" },
-  { "url": "https://nodejs.org/dist/v4.2.6/win-x86/node.exe", "path": "downloads/v4.2.6/win-x86" },
-  { "url": "https://nodejs.org/dist/v4.2.6/win-x86/node.lib", "path": "downloads/v4.2.6/win-x86" },
-  { "url": "https://nodejs.org/dist/npm/npm-1.4.9.zip",       "path": "downloads/npm" },
-  { "url": "https://dist.nuget.org/win-x86-commandline/v3.3.0/nuget.exe", "path": "downloads/nuget" }
+  { "url": "https://nodejs.org/dist/v4.2.6/win-x64/node.exe", "path": "tmp/v4.2.6/win-x64" },
+  { "url": "https://nodejs.org/dist/v4.2.6/win-x64/node.lib", "path": "tmp/v4.2.6/win-x64" },
+  { "url": "https://nodejs.org/dist/v4.2.6/win-x86/node.exe", "path": "tmp/v4.2.6/win-x86" },
+  { "url": "https://nodejs.org/dist/v4.2.6/win-x86/node.lib", "path": "tmp/v4.2.6/win-x86" },
+  { "url": "https://nodejs.org/dist/npm/npm-1.4.9.zip",       "path": "tmp/npm" },
+  { "url": "https://dist.nuget.org/win-x86-commandline/v3.3.0/nuget.exe", "path": "tmp/nuget" }
 ]

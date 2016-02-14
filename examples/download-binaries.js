@@ -7,7 +7,7 @@
 //var spinner = require('text-spinner')();
 
 
-var down = require('../')({ dest: 'downloads', progress: true }); // Base download directory
+var down = require('../')({ dest: 'temp', progress: true }); // Base download directory
 
 
 var links = [
@@ -69,5 +69,10 @@ down.on('error', function(err, linkObj) {
 
 // Pass the array of links and start download
 
-down.load(links);
+down.load(links, function(err) {
+  console.log('down.load(links, callback): callback() called');
+  if (err) {
+    console.log('err:', err);
+  }
+});
 

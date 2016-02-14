@@ -75,8 +75,13 @@ down.on('progress', function(/*progressObj*/) {
   //spinner.spin();
 });
 
+// Read list of files from .json
+
 var pathname = path.join(process.cwd(), jsonFileList);
 var links = require(pathname);
+
+// Start download
+
 down.load(links);
 
 
