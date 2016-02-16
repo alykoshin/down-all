@@ -7,7 +7,7 @@
 //var spinner = require('text-spinner')();
 
 
-var down = require('../')({ dest: 'temp', progress: true }); // Base download directory
+var down = require('../')({ dest: 'tmp', progress: true, overwrite: false });
 
 
 var links = [
