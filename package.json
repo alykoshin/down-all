@@ -45,22 +45,22 @@
   },
   "homepage": "https://github.com/alykoshin/down-all",
   "dependencies": {
-    "async": "^2.0.0-rc.3",
+    "async": "^2.0.1",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "request": "^2.72.0",
+    "request": "^2.74.0",
     "text-spinner": "^0.0.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-things": "^0.2.0",
-    "coveralls": "^2.11.9",
-    "eslint": "^2.8.0",
-    "istanbul": "^0.4.3",
+    "coveralls": "^2.11.12",
+    "eslint": "^3.2.2",
+    "istanbul": "^0.4.4",
     "jshint": "^2.9.2",
     "jsinspect": "^0.8.0",
-    "mocha": "^2.4.5",
-    "mockery": "^1.6.2",
-    "sinon": "^1.17.3"
+    "mocha": "^3.0.0",
+    "mockery": "^1.7.0",
+    "sinon": "^1.17.5"
   }
 }
