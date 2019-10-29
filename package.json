@@ -56,7 +56,7 @@
     "chai": "^3.5.0",
     "chai-things": "^0.2.0",
     "coveralls": "^2.11.12",
-    "eslint": "^3.2.2",
+    "eslint": "^6.6.0",
     "istanbul": "^0.4.4",
     "jshint": "^2.9.2",
     "jsinspect": "^0.8.0",
