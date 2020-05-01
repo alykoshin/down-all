@@ -29,7 +29,9 @@
     "patch-release": "npm test && npm run _patch-release && npm run _push",
     "minor-release": "npm test && npm run _minor-release && npm run _push",
     "__major-release": "npm test && npm run _major-release && npm run _push",
-    "coverall": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coverall": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "download,down,files,curl,wget,http,https,request"
@@ -50,7 +52,8 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "request": "^2.74.0",
-    "text-spinner": "^0.0.3"
+    "text-spinner": "^0.0.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -63,5 +66,6 @@
     "mocha": "^3.0.0",
     "mockery": "^1.7.0",
     "sinon": "^1.17.5"
-  }
+  },
+  "snyk": true
 }
