@@ -46,7 +46,7 @@
   "homepage": "https://github.com/alykoshin/down-all",
   "dependencies": {
     "async": "^2.0.1",
-    "chalk": "^1.1.3",
+    "chalk": "^2.0.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "request": "^2.74.0",
